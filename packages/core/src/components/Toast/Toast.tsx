@@ -110,12 +110,14 @@ const Toast: ToastComponent = forwardRef<HTMLDivElement, ToastProps>(
           cancelAnimationFrame(previousTimestampRef.current);
         }
       };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [paused]);
 
     useEffect(() => {
       if (duration && counter >= duration) {
         toast.remove(id);
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [counter]);
 
     return (

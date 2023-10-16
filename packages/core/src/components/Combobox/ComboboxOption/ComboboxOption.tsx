@@ -63,6 +63,7 @@ const ComboboxOption: ComboboxOptionComponent = forwardRef(
         });
         return;
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleOnClick = () => {

@@ -151,6 +151,7 @@ const _Selector: SelectorComponent = forwardRef(
           observer.current.disconnect();
         }
       };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
       activeTabAnchor,
       color,
@@ -167,6 +168,7 @@ const _Selector: SelectorComponent = forwardRef(
       if (onChange && !mounted.current) {
         onChange(activeTabAnchor);
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeTabAnchor]);
 
     const contextValue: SelectorContext = {

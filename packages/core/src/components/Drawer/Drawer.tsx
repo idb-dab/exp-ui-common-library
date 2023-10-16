@@ -96,6 +96,7 @@ const Drawer: DrawerComponent = forwardRef((props: DrawerProps, ref?: Ref<HTMLDi
     );
 
     animation.current = new Animation(keyframes, document.timeline);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, drawerRef]);
 
   useEffect(() => {
