@@ -108,6 +108,7 @@ const Switch: SwitchComponent = forwardRef((props: SwitchProps, ref?: Ref<HTMLBu
     if (onChange && !mounted.current) {
       onChange(isOn);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOn]);
 
   return (

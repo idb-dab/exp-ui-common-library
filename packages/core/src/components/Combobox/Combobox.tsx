@@ -196,6 +196,7 @@ const _Combobox: ComboboxComponent = forwardRef(
       }
 
       updateListClasses();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [open]);
 
     useKeypress('Escape', true, () => {
@@ -249,12 +250,14 @@ const _Combobox: ComboboxComponent = forwardRef(
       }, 1);
 
       updateListClasses();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.search]);
 
     useEffect(() => {
       if (open && closeOnSelect) {
         setOpen(false);
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.selectedOptions]);
 
     useVerticalArrows(visibleRefs, open);

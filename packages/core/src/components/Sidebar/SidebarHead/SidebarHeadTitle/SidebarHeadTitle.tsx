@@ -23,6 +23,7 @@ const SidebarHeadTitle: SidebarHeadTitleComponent = forwardRef<
         opened: state.expanded || state.hovered || state.mobile,
       })
     );
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [className, theme]);
   const id = usePropId(props.id);
 

@@ -51,6 +51,7 @@ const ComboboxGroup: ComboboxGroupComponent = forwardRef(
           });
         })
       );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.search]);
 
     useEffect(() => {

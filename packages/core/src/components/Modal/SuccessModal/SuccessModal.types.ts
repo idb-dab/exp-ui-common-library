@@ -4,5 +4,5 @@ export interface SuccessModalProps extends ModalProps {
   headerText: string,
   description: string,
   buttonText: string,
-  onButtonClick: () => void;
+  onButtonClick: () => void,
 }

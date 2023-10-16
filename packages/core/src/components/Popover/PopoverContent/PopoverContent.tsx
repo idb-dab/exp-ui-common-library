@@ -46,6 +46,7 @@ const PopoverContent: PopoverContentComponent = forwardRef<HTMLDivElement, Popov
       }
 
       setTimeoutId(setTimeout(() => setHidden(!open), open ? 0 : 75));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [open]);
 
     const arrowX = context.middlewareData.arrow?.x || 0;

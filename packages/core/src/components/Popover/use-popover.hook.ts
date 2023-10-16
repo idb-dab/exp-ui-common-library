@@ -66,6 +66,7 @@ export function usePopover({
       open,
       arrowRef,
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [open, setOpen, x, y]
   );
 }

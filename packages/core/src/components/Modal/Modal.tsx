@@ -105,6 +105,7 @@ const _Modal: ModalComponent = forwardRef((props: ModalProps, ref?: Ref<HTMLDivE
 
       setActiveFocusTrap(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const classes = useMemo(() => {
@@ -150,6 +151,7 @@ const _Modal: ModalComponent = forwardRef((props: ModalProps, ref?: Ref<HTMLDivE
     );
 
     animation.current = new Animation(keyframes, document.timeline);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, modalRef]);
 
   useEffect(() => {
@@ -180,6 +182,7 @@ const _Modal: ModalComponent = forwardRef((props: ModalProps, ref?: Ref<HTMLDivE
     } else {
       setActiveFocusTrap(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeModalId]);
 
   return (
