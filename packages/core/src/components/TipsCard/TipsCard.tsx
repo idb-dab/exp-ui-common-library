@@ -6,15 +6,15 @@ import { Text } from '../..';
 const TipsCard = (props: TipsCardProps) => {
   const theme = useComponentTheme('TipsCard');
   const {
-    logo,
+    logo = '/icons/shield.svg',
     title = 'Security tips',
-    description = 'Never disclose your OTP to anyone. The bank employees will never ask for your OTP',
+    description = '',
   } = props;
   const classes = twMerge(theme({}));
 
   return (
     <div className={classes}>
-      {logo && (
+      {logo && logo !== '' && (
         <div className="w-[12%] pr-3 max-md:w-[25%]">
           <img src={logo} alt="tips-card-icon" height="100%" width="100%" />
         </div>
