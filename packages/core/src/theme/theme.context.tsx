@@ -39,6 +39,7 @@ type ThemeComponents = {
   Textarea: typeof styles.textareaStyles.base;
   Tooltip: typeof styles.tooltipStyles;
   Toast: typeof styles.toastStyles;
+  TipsCard: typeof styles.TipsCardPropsStyles.base;
 };
 
 const defaultTheme: Theme = {
@@ -75,6 +76,7 @@ const defaultTheme: Theme = {
     Textarea: styles.textareaStyles.base,
     Toast: styles.toastStyles,
     Tooltip: styles.tooltipStyles,
+    TipsCard: styles.TipsCardPropsStyles.base
   },
 };
 

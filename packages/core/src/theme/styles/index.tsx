@@ -29,3 +29,4 @@ export * from './Text.styles';
 export * from './Textarea.styles';
 export * from './Toast.styles';
 export * from './Tooltip.styles';
+export * from './TipsCard.styles';
