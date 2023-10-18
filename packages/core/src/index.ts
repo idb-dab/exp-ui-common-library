@@ -30,6 +30,7 @@ export * from './components/Text';
 export * from './components/Textarea';
 export * from './components/Toast';
 export * from './components/Tooltip';
+export * from './components/TipsCard';
 export * from './animations';
 export * from './theme';
 export * from './types';
