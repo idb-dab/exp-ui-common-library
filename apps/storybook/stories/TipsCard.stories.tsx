@@ -20,9 +20,13 @@ const meta: Meta = {
 export default meta;
 
 const DefaultTemplate: StoryFn<TipsCardProps> = (args) => {
+  const mockProps = {
+    title: "Test Title",
+    description: "Test Description"
+  }
   return (
     <EnhancedView prop="Default">
-      <TipsCard {...args} />
+      <TipsCard {...mockProps} {...args} />
     </EnhancedView>
   );
 };

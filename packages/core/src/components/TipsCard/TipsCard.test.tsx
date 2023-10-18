@@ -3,11 +3,17 @@ import { render } from '@testing-library/react';
 import { TipsCard } from '.';
 
 describe('TipsCard', () => {
-  it('should render tips card component with default values', () => {
-    render(<TipsCard />);
+
+  const mockProps = {
+    title: "Test Title",
+    description: "Test Description"
+  }
+
+  it('should render tips card component with provided props', () => {
+    render(<TipsCard {...mockProps}/>);
   });
 
   it('should render tips card component if logo is passed', () => {
-    render(<TipsCard logo="test.jpeg" />);
+    render(<TipsCard {...mockProps} logo="test.jpeg" />);
   });
 });
