@@ -1,7 +1,7 @@
 import { TipsCardProps } from '@components/TipsCard/TipsCard.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { twMerge } from 'tailwind-merge';
-import { Text } from '../..';
+import Text from '../Text/Text';
 
 const TipsCard = (props: TipsCardProps) => {
   const theme = useComponentTheme('TipsCard');
@@ -12,6 +12,7 @@ const TipsCard = (props: TipsCardProps) => {
     <div className={classes}>
       {logo && logo !== '' && (
         <div className="w-[10%] pr-3 max-md:w-[17%]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={logo} alt="tips-card-icon" height="100%" width="100%" />
         </div>
       )}
