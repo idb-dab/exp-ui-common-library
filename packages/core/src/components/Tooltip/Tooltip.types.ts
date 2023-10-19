@@ -14,7 +14,7 @@ export type TooltipColor =
   | 'black';
 export type TooltipPlacement = Placement;
 export type TooltipRadius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'full';
-export type TooltipShadow = 'none' | 'sm' | 'base' | 'md';
+export type TooltipShadow = 'none' | 'sm' | 'base' | 'md' | 'modal';
 export type TooltipSize = 'xs' | 'sm' | 'md' | 'lg';
 export type TooltipTone = 'solid' | 'light';
 

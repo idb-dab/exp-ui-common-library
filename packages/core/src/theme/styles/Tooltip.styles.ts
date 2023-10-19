@@ -48,6 +48,7 @@ const base = cva(
         sm: ['shadow-sm'],
         base: ['shadow'],
         md: ['shadow-md'],
+        modal: ['shadow-modal'],
       },
     },
     compoundVariants: [
