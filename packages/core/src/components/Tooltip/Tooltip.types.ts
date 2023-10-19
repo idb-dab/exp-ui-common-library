@@ -22,7 +22,7 @@ export interface TooltipProps extends Omit<ComponentPropsWithRef<'div'>, 'size'>
   children: ReactNode;
   color?: TooltipColor;
   initiallyOpen?: boolean;
-  label?: string;
+  label?: React.ReactNode;
   offset?: number;
   placement?: TooltipPlacement;
   radius?: TooltipRadius;
