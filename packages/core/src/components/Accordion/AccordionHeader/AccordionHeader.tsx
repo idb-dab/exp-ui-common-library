@@ -4,7 +4,8 @@ import {
   AccordionHeaderProps,
 } from '@components/Accordion/AccordionHeader/AccordionHeader.types';
 import { useAccordionItemContext } from '@components/Accordion/AccordionItem/AccordionItem.context';
-import { ChevronDownIcon } from '@icons/ChevronDown';
+import { PlusIcon } from '@icons/PlusIcon';
+import { MinusIcon } from '@icons/MinusIcon';
 import { useComponentTheme } from '@theme/theme.context';
 import { forwardRef, Ref, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -68,7 +69,7 @@ const AccordionHeader: AccordionHeaderComponent = forwardRef<
       {...additionalProps}
     >
       {children}
-      <ChevronDownIcon className={iconClasses} />
+      {expanded ? <MinusIcon className={iconClasses} /> : <PlusIcon className={iconClasses} />}
     </button>
   );
 });

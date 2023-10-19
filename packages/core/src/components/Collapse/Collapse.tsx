@@ -57,6 +57,7 @@ const Collapse = (props: CollapseProps) => {
       style={{
         height: '0px',
         overflow: 'hidden',
+        marginBottom: '4%'
       }}
     >
       {children}
