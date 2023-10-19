@@ -1,7 +1,7 @@
 {
   "name": "@idb-dab/ui-core",
   "description": "A React component library for building modern web applications using Tailwind CSS.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "author": "Aaron Rumao",
   "repository": {
@@ -31,11 +31,11 @@
     "README.md"
   ],
   "scripts": {
-    "prebuild": "rm -rf dist",
+    "prebuild": "del dist",
     "build": "rollup -c rollup.config.mjs",
     "dev": "npm run build --watch",
     "lint": "eslint \"src/**/*.ts*\"",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "clean": "del .turbo && del node_modules && del dist",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
