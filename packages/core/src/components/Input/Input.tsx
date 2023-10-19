@@ -15,7 +15,7 @@ import { default as Dropdown } from '@components/Dropdown/Dropdown';
 import { default as Button } from '@components/Button/Button';
 
 const defaultProps: Partial<InputProps> = {
-  color: 'blue',
+  color: 'secondary',
   disabled: false,
   loading: false,
   radius: 'base',
@@ -107,7 +107,6 @@ const Input: InputComponent = forwardRef((props: InputProps, ref?: Ref<HTMLInput
     enabledPasswordToggle,
     enableCountryCode,
   ]);
-
 
   useEffect(() => {
     if (props.setCountryCode) {

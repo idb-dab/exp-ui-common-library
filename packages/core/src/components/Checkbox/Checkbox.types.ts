@@ -14,7 +14,9 @@ export type CheckboxColor =
   | 'purple'
   | 'gray'
   | 'dark'
-  | 'black';
+  | 'black'
+  | 'primary'
+  | 'secondary';
 export type CheckboxRadius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'full';
 export type CheckboxSize = 'sm' | 'md' | 'lg' | 'xl';
 export type CheckboxTone = 'solid' | 'light';

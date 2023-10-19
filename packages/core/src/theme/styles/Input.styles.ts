@@ -16,17 +16,21 @@ const base = cva(
   {
     variants: {
       color: {
-        blue: [,
-          'border-blue-200',
-          'focus:border-blue-200',
-          'focus:outline-none',
-          'active:border-blue-200',
-          'active:outline-none'
-        ],
+        blue: [],
         purple: [],
         gray: [],
         dark: [],
         black: [],
+        primary: [
+          'border-primary-200',
+          'focus:border-primary-200',
+          'active:border-primary-400',
+        ],
+        secondary: [
+          'border-secondary-200',
+          'focus:border-secondary-400',
+          'active:border-secondary-400',
+        ],
       },
       size: {
         xs: ['text-xs', 'h-6'],

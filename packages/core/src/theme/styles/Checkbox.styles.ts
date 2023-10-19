@@ -75,6 +75,24 @@ const base = cva(['cursor-pointer', 'form-checkbox'], {
         'disabled:text-gray-600',
         'disabled:hover:text-gray-600',
       ],
+      primary: [
+        'text-primary-500',
+        'hover:text-primary-600',
+        'focus:text-primary-600',
+        'focus:ring-primary-100',
+        'active:text-primary-900',
+        'disabled:text-primary-300',
+        'disabled:hover:text-primary-300',
+      ],
+      secondary: [
+        'text-secondary-500',
+        'hover:text-secondary-600',
+        'focus:text-secondary-600',
+        'focus:ring-secondary-100',
+        'active:text-secondary-900',
+        'disabled:text-secondary-300',
+        'disabled:hover:text-secondary-300',
+      ],
     },
     tone: {
       solid: [
