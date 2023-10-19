@@ -4,7 +4,7 @@ const base = cva([], {
   variants: {
     color: {
       white: 'bg-white',
-      gray: 'bg-gray-50',
+      gray: 'bg-neutral-400',
       slate: 'bg-slate-50',
       zinc: 'bg-zinc-50',
     },
@@ -41,12 +41,12 @@ const base = cva([], {
       transparent: [],
     },
     bordered: {
-      true: ['border', 'border-gray-100'],
+      true: [],
     },
   },
 });
 
-const body = cva([], {
+const body = cva(['bg-neutral-50'], {
   variants: {
     size: {
       sm: ['text-sm', 'px-4', 'py-2'],
@@ -55,7 +55,7 @@ const body = cva([], {
       xl: ['text-lg', 'px-4', 'py-5'],
     },
     bordered: {
-      true: [],
+      true: ['border', 'border-gray-100'],
       false: [],
     },
   },
@@ -109,7 +109,7 @@ const header = cva(
         lg: ['first:rounded-t-lg'],
       },
       bordered: {
-        true: ['border-t', 'first:border-t-0', 'border-gray-100'],
+        true: ['border', 'border-gray-100'],
         false: [],
       },
       withRing: {
@@ -263,11 +263,11 @@ const header = cva(
 const icon = cva(['transition', 'transform', 'duration-250', 'ease-in-out'], {
   variants: {
     state: {
-      active: 'rotate-180',
+      active: '',
       inactive: '',
     },
     size: {
-      sm: ['w-4', 'h-4'],
+      sm: ['w-2', 'h-4'],
       md: ['w-5', 'h-5'],
       lg: ['w-5', 'h-5'],
       xl: ['w-6', 'h-6'],
