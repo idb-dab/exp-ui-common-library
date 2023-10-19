@@ -31,11 +31,11 @@
     "README.md"
   ],
   "scripts": {
-    "prebuild": "del dist",
+    "prebuild": "rm -rf dist",
     "build": "rollup -c rollup.config.mjs",
     "dev": "npm run build --watch",
     "lint": "eslint \"src/**/*.ts*\"",
-    "clean": "del .turbo && del node_modules && del dist",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage"
   },
