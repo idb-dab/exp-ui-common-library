@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef, ForwardRefExoticComponent } from 'react';
 
-export type TabsColor = 'blue' | 'red' | 'green' | 'yellow' | 'purple' | 'gray' | 'dark' | 'black';
+export type TabsColor = 'blue' | 'red' | 'green' | 'yellow' | 'purple' | 'gray' | 'dark' | 'black' | 'primary' | 'secondary';
 export type TabsMethod = 'unmount' | 'hide';
 export type TabsRadius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'full';
 export type TabsSize = 'sm' | 'md' | 'lg';

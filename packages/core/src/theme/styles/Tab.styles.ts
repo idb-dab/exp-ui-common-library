@@ -17,6 +17,8 @@ const tab = cva(
         gray: ['focus-visible:bg-gray-100/50'],
         dark: ['focus-visible:bg-gray-200/50'],
         black: ['focus-visible:bg-gray-300/50'],
+        primary: ['focus-visible:bg-primary-300'],
+        secondary: ['focus-visible:bg-secondary-300'],
       },
       state: {
         active: [],
@@ -42,7 +44,7 @@ const tab = cva(
     },
     defaultVariants: {
       tone: 'line',
-      color: 'blue',
+      color: 'secondary',
       size: 'md',
     },
     compoundVariants: [
@@ -178,6 +180,30 @@ const tab = cva(
         className: ['border-b-gray-200', 'hover:border-b-gray-300'],
       },
       {
+        tone: 'line',
+        color: 'primary',
+        state: 'active',
+        className: ['font-bold','border-b-primary-900'],
+      },
+      {
+        tone: 'line',
+        color: 'primary',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-primary-100'],
+      },
+      {
+        tone: 'line',
+        color: 'secondary',
+        state: 'active',
+        className: ['font-bold','border-b-secondary-300'],
+      },
+      {
+        tone: 'line',
+        color: 'secondary',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-secondary-100'],
+      },
+      {
         tone: 'pill',
         state: 'inactive',
         className: ['text-gray-500', 'bg-transparent'],
@@ -275,6 +301,30 @@ const tab = cva(
       {
         tone: 'pill',
         color: 'black',
+        state: 'inactive',
+        className: ['hover:bg-gray-100'],
+      },
+      {
+        tone: 'pill',
+        color: 'primary',
+        state: 'active',
+        className: ['bg-primary-900', 'text-black'],
+      },
+      {
+        tone: 'pill',
+        color: 'primary',
+        state: 'inactive',
+        className: ['hover:bg-gray-100'],
+      },
+      {
+        tone: 'pill',
+        color: 'secondary',
+        state: 'active',
+        className: ['bg-secondary-300', 'text-white'],
+      },
+      {
+        tone: 'pill',
+        color: 'secondary',
         state: 'inactive',
         className: ['hover:bg-gray-100'],
       },
