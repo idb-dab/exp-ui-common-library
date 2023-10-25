@@ -1,12 +1,13 @@
 import { cva } from 'class-variance-authority';
 
 const tab = cva(
-  ['flex', 'flex-inline', 'justify-center', 'items-center', 'focus-visible:outline-0'],
+  ['relative', 'flex', 'flex-inline', 'justify-center', 'items-center', 'focus-visible:outline-0'],
   {
     variants: {
       tone: {
         line: [],
         pill: ['antialiased'],
+        'line-highlight': ['whitespace-nowrap', '!ml-0', '!pb-2.5'],
       },
       color: {
         blue: ['focus-visible:bg-blue-100/50'],
@@ -43,7 +44,7 @@ const tab = cva(
       },
     },
     defaultVariants: {
-      tone: 'line',
+      tone: 'line-highlight',
       color: 'secondary',
       size: 'md',
     },
@@ -183,7 +184,7 @@ const tab = cva(
         tone: 'line',
         color: 'primary',
         state: 'active',
-        className: ['font-bold','border-b-primary-900'],
+        className: ['font-bold', 'border-b-primary-900'],
       },
       {
         tone: 'line',
@@ -195,7 +196,7 @@ const tab = cva(
         tone: 'line',
         color: 'secondary',
         state: 'active',
-        className: ['font-bold','border-b-secondary-300'],
+        className: ['font-bold', 'border-b-secondary-300'],
       },
       {
         tone: 'line',
@@ -328,6 +329,136 @@ const tab = cva(
         state: 'inactive',
         className: ['hover:bg-gray-100'],
       },
+      {
+        tone: 'line-highlight',
+        state: 'active',
+        className: ['text-gray-900', 'border-b-2'],
+      },
+      {
+        tone: 'line-highlight',
+        state: 'inactive',
+        className: ['text-gray-500', 'border-b-2'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'blue',
+        state: 'active',
+        className: ['border-b-blue-400'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'blue',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-blue-200'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'red',
+        state: 'active',
+        className: ['border-b-red-400'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'red',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-red-200'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'green',
+        state: 'active',
+        className: ['border-b-green-400'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'green',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-green-200'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'yellow',
+        state: 'active',
+        className: ['border-b-yellow-300'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'yellow',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-yellow-100'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'purple',
+        state: 'active',
+        className: ['border-b-purple-400'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'purple',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-purple-200'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'gray',
+        state: 'active',
+        className: ['border-b-gray-400'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'gray',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-gray-200'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'dark',
+        state: 'active',
+        className: ['border-b-gray-700'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'dark',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-gray-200'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'black',
+        state: 'active',
+        className: ['border-b-black'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'black',
+        state: 'inactive',
+        className: ['border-b-gray-200', 'hover:border-b-gray-300'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'primary',
+        state: 'active',
+        className: ['font-bold', 'border-b-gray-100', 'text-primary-900'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'primary',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-primary-100'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'secondary',
+        state: 'active',
+        className: ['font-bold', 'border-b-gray-100'],
+      },
+      {
+        tone: 'line-highlight',
+        color: 'secondary',
+        state: 'inactive',
+        className: ['border-b-gray-100', 'hover:border-b-secondary-100'],
+      },
     ],
   }
 );
@@ -341,12 +472,42 @@ const wrapper = cva(['overflow-auto'], {
   },
 });
 
-const list = cva(['flex', 'flex-inline', 'space-x-2', 'px-1', 'mb-2', 'py-2', 'overflow-auto']);
+const highlightWrapper = cva(
+  ['absolute', 'w-1/5', 'border-2', 'rounded-tl-2xl', 'rounded-tr-2xl'],
+  {
+    variants: {
+      color: {
+        blue: ['border-blue-100'],
+        red: ['border-red-100'],
+        green: ['border-green-100'],
+        yellow: ['border-yellow-100'],
+        purple: ['border-purple-100'],
+        gray: ['border-gray-100'],
+        dark: ['border-gray-200'],
+        black: ['border-gray-300'],
+        primary: ['border-primary-900'],
+        secondary: ['border-secondary-300'],
+      },
+    },
+  }
+);
+
+const list = cva([
+  'scrollbar-none',
+  'flex',
+  'flex-inline',
+  'space-x-2',
+  'px-1',
+  'mb-2',
+  'py-2',
+  'overflow-auto',
+]);
 
 const tabStyles = {
   wrapper,
   tab,
   list,
+  highlightWrapper,
 };
 
 export { tabStyles };

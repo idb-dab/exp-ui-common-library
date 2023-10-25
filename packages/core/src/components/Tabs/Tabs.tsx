@@ -13,8 +13,8 @@ const defaultProps: Partial<TabsProps> = {
   method: 'hide',
   radius: 'none',
   size: 'sm',
-  tone: 'line',
-  fullWidth: true
+  tone: 'line-highlight',
+  fullWidth: true,
 };
 
 const TabsRoot: TabsComponent = forwardRef<HTMLDivElement, TabsProps>(
