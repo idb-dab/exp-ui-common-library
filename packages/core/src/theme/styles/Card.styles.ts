@@ -76,13 +76,13 @@ const base = cva(['flex', 'flex-col'], {
   ],
 });
 
-const body = cva([], {
+const body = cva(['text-sm'], {
   variants: {
     size: {
-      sm: ['px-4', 'text-sm'],
-      base: ['px-5', 'text-base'],
-      md: ['px-6', 'text-md'],
-      lg: ['px-7', 'text-lg'],
+      sm: ['px-4'],
+      base: ['px-5'],
+      md: ['px-6'],
+      lg: ['px-7'],
     },
     withDivider: {
       true: [],
@@ -133,13 +133,13 @@ const body = cva([], {
   ],
 });
 
-const header = cva(['flex', 'flex-row', 'justify-between', 'items-center'], {
+const header = cva(['flex', 'flex-row', 'justify-between', 'items-center', 'font-medium', 'text-lg'], {
   variants: {
     size: {
-      sm: ['p-4', 'text-sm'],
-      base: ['p-5', 'text-base'],
-      md: ['p-6', 'text-md'],
-      lg: ['p-7', 'text-lg'],
+      sm: ['py-2', 'px-4'],
+      base: ['py-3', 'px-5'],
+      md: ['py-4', 'px-6'],
+      lg: ['py-5', 'px-7'],
     },
     radius: {
       none: ['rounded-t-none'],
@@ -151,13 +151,13 @@ const header = cva(['flex', 'flex-row', 'justify-between', 'items-center'], {
   },
 });
 
-const footer = cva(['flex', 'items-center'], {
+const footer = cva(['flex', 'items-center', 'text-sm'], {
   variants: {
     size: {
-      sm: ['p-4', 'text-sm'],
-      base: ['p-5', 'text-base'],
-      md: ['p-6', 'text-md'],
-      lg: ['p-7', 'text-lg'],
+      sm: ['p-4'],
+      base: ['p-5'],
+      md: ['p-6'],
+      lg: ['p-7'],
     },
     radius: {
       none: ['rounded-b-none'],
@@ -181,12 +181,24 @@ const image = cva(['flex', 'flex-row', 'items-center', 'justify-center'], {
   },
 });
 
+const icon = cva(['flex', 'items-center', 'h-8', 'w-8'], {
+  variants: {
+    size: {
+      sm: ['m-4', 'mb-0'],
+      base: ['m-5', 'mb-0'],
+      md: ['m-6', 'mb-0'],
+      lg: ['m-7', 'mb-0'],
+    },
+  },
+});
+
 const cardStyles = {
   base,
   body,
   footer,
   header,
   image,
+  icon
 };
 
 export { cardStyles };

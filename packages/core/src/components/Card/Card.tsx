@@ -9,14 +9,15 @@ import { usePropId } from '@utils/usePropId';
 import { forwardRef, Ref, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { CardContextProvider } from './Card.context';
+import { CardIcon } from '@components/Card/CardIcon';
 
 const defaultProps: Partial<CardProps> = {
   bordered: true,
   color: 'white',
   radius: 'base',
-  shadow: 'sm',
-  size: 'base',
-  withDivider: true,
+  shadow: 'none',
+  size: 'sm',
+  withDivider: false,
 };
 
 const CardRoot: CardComponent = forwardRef<HTMLDivElement, CardProps>(
@@ -73,6 +74,7 @@ const Card = Object.assign(CardRoot, {
   Image: CardImage,
   Body: CardBody,
   Footer: CardFooter,
+  Icon: CardIcon,
 });
 
 export default Card;
