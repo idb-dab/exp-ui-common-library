@@ -9,11 +9,12 @@ import { forwardRef, Ref, useState } from 'react';
 import { TabsContextProvider } from './Tabs.context';
 
 const defaultProps: Partial<TabsProps> = {
-  color: 'dark',
+  color: 'secondary',
   method: 'hide',
   radius: 'none',
-  size: 'md',
-  tone: 'line',
+  size: 'sm',
+  tone: 'line-highlight',
+  fullWidth: true,
 };
 
 const TabsRoot: TabsComponent = forwardRef<HTMLDivElement, TabsProps>(

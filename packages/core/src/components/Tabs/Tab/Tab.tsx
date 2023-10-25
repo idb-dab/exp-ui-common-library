@@ -48,6 +48,9 @@ const Tab: TabComponent = forwardRef<HTMLButtonElement, TabProps>(
         {...additionalProps}
       >
         {children}
+        {tone === 'line-highlight' && selected && (
+          <div className={theme.highlightWrapper({ color })} style={{ bottom: '-2px' }}></div>
+        )}
       </button>
     );
   }
