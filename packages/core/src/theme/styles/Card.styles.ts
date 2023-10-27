@@ -79,10 +79,10 @@ const base = cva(['flex', 'flex-col'], {
 const body = cva(['text-sm'], {
   variants: {
     size: {
-      sm: ['px-4'],
-      base: ['px-5'],
-      md: ['px-6'],
-      lg: ['px-7'],
+      sm: ['px-4', 'pb-4'],
+      base: ['px-5', 'pb-5'],
+      md: ['px-6', 'pb-6'],
+      lg: ['px-7', 'pb-7'],
     },
     withDivider: {
       true: [],
@@ -109,26 +109,6 @@ const body = cva(['text-sm'], {
       size: 'lg',
       withDivider: true,
       className: ['py-6'],
-    },
-    {
-      size: 'sm',
-      withDivider: false,
-      className: ['py-1'],
-    },
-    {
-      size: 'base',
-      withDivider: false,
-      className: ['py-2'],
-    },
-    {
-      size: 'md',
-      withDivider: false,
-      className: ['py-3'],
-    },
-    {
-      size: 'lg',
-      withDivider: false,
-      className: ['py-4'],
     },
   ],
 });
